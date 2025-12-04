@@ -1,0 +1,54 @@
+{
+  "name": "api_testing",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Simple TAF for API testing of RealWorld example app (https://github.com/avanelli/fastify-realworld-example-app)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "start-server": "dotenv -e .env -- npm run start --prefix ./app",
+    "pretest": "npm run lint-fix",
+    "test": "node ./support/start-and-test.js",
+    "test-got-run": "cross-env API_CLIENT=got npm test",
+    "test-got": "run-s pretest test-got-run",
+    "test-undici-run": "cross-env API_CLIENT=undici npm test",
+    "test-undici": "run-s pretest test-undici-run",
+    "get-report": "npx vite preview --outDir html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zentestuken/atm_advanced.git"
+  },
+  "keywords": [
+    "api",
+    "testing",
+    "axios",
+    "vitest"
+  ],
+  "author": "Yauhen Viazau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zentestuken/atm_advanced/issues"
+  },
+  "homepage": "https://github.com/zentestuken/atm_advanced#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@eslint/json": "^0.13.2",
+    "@vitest/ui": "^3.2.4",
+    "ajv": "^8.17.1",
+    "axios": "^1.11.0",
+    "cross-env": "^10.0.0",
+    "dotenv": "^17.2.2",
+    "dotenv-cli": "^10.0.0",
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0",
+    "got": "^14.4.7",
+    "npm-run-all": "^4.1.5",
+    "start-server-and-test": "^2.1.0",
+    "undici": "^7.16.0",
+    "vitest": "^3.2.4",
+    "winston": "^3.17.0",
+    "winston-format": "^1.0.1"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "fastify-realworld-example-app",
+  "version": "0.0.1",
+  "description": "Fastify + Knex.js - Realworld Example App",
+  "main": "index.js",
+  "scripts": {
+    "create:env": "node -r fs -e \"fs.copyFileSync('.env.sample', '.env', fs.constants.COPYFILE_EXCL)\"",
+    "start": "node .",
+    "dev": "nodemon . | pino-pretty",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "tap",
+    "test:watch": "tap --reporter=list --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avanelli/fastify-realworld-example-app.git"
+  },
+  "keywords": [
+    "Fastify",
+    "Knex.js",
+    "Realworld",
+    "example",
+    "node.js"
+  ],
+  "author": "Andrea Vanelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avanelli/fastify-realworld-example-app/issues"
+  },
+  "homepage": "https://github.com/avanelli/fastify-realworld-example-app#readme",
+  "dependencies": {
+    "@fastify/autoload": "^5.6.0",
+    "@fastify/cors": "^8.2.0",
+    "@fastify/jwt": "^6.3.3",
+    "bcrypt": "^5.1.0",
+    "env-schema": "^5.1.1",
+    "fastify": "^4.10.2",
+    "fastify-plugin": "^4.3.0",
+    "fluent-json-schema": "^3.1.0",
+    "http-errors": "^2.0.0",
+    "knex": "^2.3.0",
+    "slug": "^8.2.2",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "fetch-mock": "^9.11.0",
+    "nodemon": "^2.0.20",
+    "pino-pretty": "^9.1.1",
+    "standard": "^17.0.0",
+    "tap": "^16.3.2"
+  }
+}

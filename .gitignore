@@ -1,0 +1,7 @@
+/html
+/app/node_modules
+/node_modules
+
+# Dotenv does not include any sensitive data,
+# It's better to keep it public for this training repo.
+# .env
