@@ -1,6 +1,5 @@
 class UserResponseDTO {
   constructor(responseBody) {
-    this.id = responseBody.user.id
     this.username = responseBody.user.username
     this.email = responseBody.user.email
     this.token = responseBody.user.token

@@ -1,5 +1,6 @@
 import defaultUser from '../fixtures/user.json'
 import defaultArticle from '../fixtures/article.json'
+import logger from './logger.js'
 
 export const getRandomLetters = (length) => {
   let result = ''
@@ -29,4 +30,13 @@ export const generateArticleData = () => {
     body: `Article body ${randomLetters}`,
     tagList: [`tagOne${randomLetters}`, `tagTwo${randomLetters}`, `tagThree${randomLetters}`]
   }
+}
+
+export const validateSchema = (schema, data) => {
+  const isValid = schema(data)
+  if (!isValid) {
+    const testName = expect.getState().currentTestName || 'unknown test'
+    logger.error('Schema validation failed', { errors: schema.errors, data }, testName)
+  }
+  return isValid
 }
