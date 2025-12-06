@@ -9,7 +9,7 @@ For simplicity, app code is included in this repo (original - see [GitHub - avan
 - app auto-start
 - three API clients supported: axios, got, undici
 - response schema validation using ajv, joi
-- tests covering scenarios with available endpoints
+- tests covering scenarios for available endpoints
 
 #### Install
 
