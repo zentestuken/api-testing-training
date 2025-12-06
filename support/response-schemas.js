@@ -1,5 +1,6 @@
 import Ajv from 'ajv'
 import addFormats from 'ajv-formats'
+import enjoi from 'enjoi'
 
 const ajv = new Ajv()
 addFormats(ajv)
@@ -110,9 +111,16 @@ const error = {
   additionalProperties: false,
 }
 
-export default {
+export const ajvSchemas = {
   user: ajv.compile(user),
   article: ajv.compile(article),
   articlesList: ajv.compile(articlesList),
   error: ajv.compile(error),
+}
+
+export const joiSchemas = {
+  user: enjoi.schema(user),
+  article: enjoi.schema(article),
+  articlesList: enjoi.schema(articlesList),
+  error: enjoi.schema(error),
 }

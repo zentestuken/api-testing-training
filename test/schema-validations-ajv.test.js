@@ -15,7 +15,7 @@ import {
   generateArticleData,
   validateSchema,
 } from '../support/helpers.js'
-import Schemas from '../support/response-schemas.js'
+import { ajvSchemas as Schemas } from '../support/response-schemas.js'
 
 describe('Tests without pre-registration', () => {
   it('register a new user', async function () {

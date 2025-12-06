@@ -33,10 +33,20 @@ export const generateArticleData = () => {
 }
 
 export const validateSchema = (schema, data) => {
-  const isValid = schema(data)
+  const testName = expect.getState().currentTestName || 'unknown test'
+  let isValid
+  let errors
+  if (typeof schema === 'function') {
+    isValid = schema(data)
+    errors = schema.errors
+  } else if (schema.validate) {
+    errors  = schema.validate(data).error
+    isValid = !errors
+  }
   if (!isValid) {
-    const testName = expect.getState().currentTestName || 'unknown test'
-    logger.error('Schema validation failed', { errors: schema.errors, data }, testName)
+    logger.error('Schema validation failed', { errors, data }, testName)
+  } else {
+    logger.info('Schema validation passed', { data }, testName)
   }
   return isValid
 }
