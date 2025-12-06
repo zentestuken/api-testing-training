@@ -22,4 +22,4 @@ For simplicity, app code is included in this repo (original - see [GitHub - avan
 
 - `npm test` - test using axios API client
 - `npm run test-got` - test using got API client
-- `npm run test-undici` - test using unidici API client
+- `npm run test-undici` - test using undici API client
