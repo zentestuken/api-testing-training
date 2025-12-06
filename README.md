@@ -4,7 +4,7 @@ For simplicity, app code is included in this repo (original - see [GitHub - avan
 
 #### Features
 
-- vitest runner
+- vitest runner with HTML reporter
 - winston-based logger
 - app auto-start
 - three API clients supported: axios, got, undici
