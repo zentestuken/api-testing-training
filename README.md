@@ -1,6 +1,6 @@
 ## Simple TAF for API testing of "RealWorld" example app
 
-For simplicity, app code is included in this repo (original - see ([GitHub - avanelli/fastify-realworld-example-app: Fastify + Knex.js - Realworld Example App](https://github.com/avanelli/fastify-realworld-example-app)))
+For simplicity, app code is included in this repo (original - see [GitHub - avanelli/fastify-realworld-example-app: Fastify + Knex.js - Realworld Example App](https://github.com/avanelli/fastify-realworld-example-app))
 
 #### Features
 
